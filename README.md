@@ -2,7 +2,7 @@
 
 # 📊 Advanced Report in SQL — Northwind Database
 
-![alt text](NortWindTraders.png)
+![alt text](NorthWindTraders.png)
 
 ## Goal
 
