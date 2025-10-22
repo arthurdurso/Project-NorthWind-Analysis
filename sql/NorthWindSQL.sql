@@ -40,7 +40,7 @@ SELECT
         total_revenue - LAG(total_revenue) OVER (PARTITION BY order_year ORDER BY order_month) AS month_growth,
         ytd_revenue,
         ROUND((total_revenue - LAG(total_revenue) OVER (PARTITION BY order_year ORDER BY order_month)) / LAG(total_revenue) OVER (PARTITION BY order_year ORDER BY order_month) * 100::NUMERIC, 2) AS month_growth_percentage
-FROM Acumulative_Revenue 
+FROM Acumulative_Revenue;
 
 
 -- 2. Segmentação de clientes
@@ -113,9 +113,9 @@ JOIN (
             contact_name,
             country
     FROM customers
-    WHERE upper(country) = 'UK'
+    WHERE UPPER(country) = 'UK'
 ) AS c ON c.customer_id = o.customer_id
 GROUP BY c.contact_name
-HAVING ROUND(SUM(od.unit_price * od.quantity * (1 - od.discount) + o.freight)::NUMERIC, 2) > 1000
-ORDER BY total_paid DESC
+HAVING SUM(od.unit_price * od.quantity * (1 - od.discount) + o.freight) > 1000
+ORDER BY total_paid DESC;
 
