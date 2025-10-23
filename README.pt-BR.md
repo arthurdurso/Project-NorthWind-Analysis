@@ -78,8 +78,6 @@ No PgAdmin, você pode verificar todas as **tabelas e views** do banco northwind
 - Expanda o servidor `db` → `Databases` → `northwind` → `Schemas` → `public` para ver as tabelas e views.  
 - Clique com o botão direito → **View/Edit Data** → **All Rows** para inspecionar o conteúdo de cada tabela.  
 
-> Esta etapa é útil para verificar se o script `northwind.sql` carregou corretamente e se todas as tabelas e dados estão disponíveis para análise.
-
 6. **Parar o Docker Compose:**  
 Pare o servidor iniciado com `docker-compose up` usando Ctrl-C e remova os contêineres com:
     
