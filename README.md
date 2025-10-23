@@ -1,4 +1,4 @@
-🔗 Este documento também está disponível em [Português](./README.pt-BR.md). # Construir
+🔗 Este documento também está disponível em [Português](./README.pt-BR.md).
 
 # 📊 Advanced Report in SQL — Northwind Database
 
