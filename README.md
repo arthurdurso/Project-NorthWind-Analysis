@@ -249,3 +249,29 @@ These queries can serve as the basis for dashboards, performance analyses, or Bu
     ```
     
 ---
+
+## Expansion: Triggers and Materialized Views
+
+This section was designed to demonstrate modern techniques for data analysis, performance optimization, and automation directly within the PostgreSQL database.
+
+### Materialized View (monthly_revenue_mv)
+
+A materialized view was created based on the previous analysis to consolidate monthly revenue.
+This significantly improves analytical query performance by avoiding repeated heavy aggregations on large tables.
+
+### Automated Refresh Triggers
+
+To ensure the data remains up-to-date, triggers were added to the orders and order_details tables.
+Whenever an order is inserted, updated, or deleted, PostgreSQL automatically refreshes the materialized view, maintaining consistent and reliable metrics.
+
+### Expansion Purpose
+
+This extended module was built to:
+
+1. Demonstrate best practices in advanced SQL and PL/pgSQL
+
+2. Provide a lightweight analytical layer within the database
+
+3. Support direct consumption by BI tools (e.g., Power BI)
+
+4. Show how to automate analytical pipelines without relying on external ETL processes
